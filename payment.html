@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Payment Gateway</title>
+    <link href="paymentform.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="task.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>Payment Form</h2>
+        <form action="payment.php" method="POST">
+            <h4>Account</h4>
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name" required class="name" name="name" id="name"
+                        maxlength="30" pattern="[A-Za-z]{1,32}" title="Enter only alphabets">
+                    <i class="fa fa-user icon"></i>
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Enter Amount" required class="name" name="amount" id="amount"
+                       pattern="^[0-9]{6}$"  maxlength="8" >
+                    <i class="fa fa-user icon"></i>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="email" placeholder="College Email Address" required class="name" name="email"
+                        id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$">
+                    <i class="fa fa-envelope icon"></i>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <h4> Date of Birth</h4>
+                    <input type="text" placeholder="DD" class="dob" name="dd" id="dd">
+                    <input type="text" placeholder="MM" class="dob" name="mm" id="mm">
+                    <input type="text" placeholder="YYYY" class="dob" name="yyyy" id="yyyy">
+                </div>
+                <div class="input-box">
+                    <h4> Gender</h4>
+                    <input type="radio" id="b1" name="gender" checked class="radio" id="gender">
+                    <label for="b1">Male</label>
+                    <input type="radio" id="b2" name="gender" class="radio" id="gender">
+                    <label for="b2">Female</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <h4>Payment Details</h4>
+                    <input type="radio" name="paym" id="bc1" checked class="radio" id="paym">
+                    <label for="bc1"><span><i class="fa fa-cc-visa"></i> Credit Card</span></label>
+                    <input type="radio" name="paym" id="bc2" class="radio" id="paym">
+                    <label for="bc2"><span><i class="fa fa-cc-paypal"></i>paytm</span></label>
+                </div>
+            </div>
+    </div>
+    <div class="input-group">
+        <div class="input-box">
+            <input type="tel" placeholder="Card Number" required class="name" name="card" id="card"
+                maxlength="8">
+            <i class="fa fa-credit-card icon"></i>
+        </div>
+    </div>
+    <div class="input-group">
+        <div class="input-box">
+            <input type="tel" placeholder="Card CVC" required class="name" name="CVC" id="CVC" maxlength="6"
+                pattern="^[0-9]{6}$">
+            <i class="fa fa-user icon"></i>
+        </div>
+        <div class="input-box">
+            <select name="month" id="month">
+                <option>01 jun</option>
+                <option>02 jun</option>
+                <option>03 jun</option>
+            </select>
+            <select name="year" id="year">
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+            </select>
+        </div>
+    </div>
+    <div class="input-group">
+        <div class="input-box">
+            <button type="submit" name="submit">PAY NOW</button>
+        </div>
+    </div>
+    </form>
+    </div>
+    <div id="taskbar" style="display: flexbox;position:sticky;">
+        <div class="task" style="border-radius: 50%;">
+            <img src="home.jpg" alt="logo" style="border-color: black; height: 0.7cm;padding-left:1cm;
+            width:0.7cm;" />
+        </div>
+        <div class="task">
+            <a href="comment.html"> <img src="chat.jpg" alt="logo" style="border-color: black; height: 0.7cm; padding-left:6cm;
+            width:0.7cm;" /></a>
+        </div>
+        <div class="task">
+            <a href="attendance.html"><img src="attendance.jpg" alt="logo" style="border-color: black; height: 0.7cm;padding-left:8cm;
+            width:0.7cm;" /></a>
+        </div>
+        <a href="payment.html">
+            <div class="task">
+                <img src="payment.jpg" alt="logo" style="border-color: black; height: 0.7cm;padding-left:8cm;
+            width:0.7cm;" />
+            </div>
+        </a>
+        <div class="task">
+            <a href="setting.html"><img src="setting.jpg" alt="logo" style="border-color: black; height: 0.7cm;padding-left:6cm;
+            width:0.7cm;" /></a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
